@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>@ViewBag.Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="~/css/main.css" rel="stylesheet" asp-append-version="true"/>
+	<link href="~/font-awesome/css/all.css" rel="stylesheet" />
+	<link href="~/toaster/css/toast-snackbar.css" rel="stylesheet" />
+	<link href="~/datatables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+	@await RenderSectionAsync("head", false)
+</head>
+<body>
+
+	<div class="d-flex">
+		<partial name="_NavigationBar" />
+
+		<div class="container-fluid vh-100 pt-3 pl-4 pr-4 overflow-auto">
+			<div class="row">
+				<div class="dropdown dd-profile position-relative mr-5">
+					<nav data-toggle="dropdown">
+						<img src="~/areas/pics/HinhUser.jpg"
+							 class="dd-img-user rounded-circle img-responsive position-absolute" />
+					</nav>
+					<nav class="dropdown-menu dd-userMenu width-250px mt-5">
+						<ul class="list-group list-group-flush ">
+							<li class=" list-group-item">
+								<img class="dd-img-article rounded-circle img-responsive mr-1" src="~/areas/pics/HinhUser.jpg" alt="Alternate Text" />
+								<span class="text-dark">Nguyễn Trọng Nguyên</span>
+							</li>
+							<li class="list-group-item">
+								<a class="d-block text-decoration-none text-dark text-truncate" href="#">Sửa thông tin</a>
+							</li>
+							<li class="list-group-item">
+								<a class="d-block text-decoration-none text-dark text-truncate" href="#">Hỏ trợ </a>
+							</li>
+							<li class="list-group-item">
+								<a class="d-block text-decoration-none text-dark text-truncate" href="#">Cài đặt</a>
+							</li>
+							<li class="list-group-item">
+								<a class="d-block text-decoration-none text-dark text-truncate" href="#">Đăng xuất</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="row mt-4 mb-5">
+				@RenderBody()
+			</div>
+		</div>
+	</div>
+
+	<!--Font Awesome-->
+	<link href="~/font-awesome/css/all.css" rel="stylesheet" />
+	<!-- jQuery -->
+	<script src="~/jquery/jquery.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="~/twitter-bootstrap/js/bootstrap.bundle.js"></script>
+	<!-- Toaster -->
+	<script src="~/toaster/js/toast-snackbar.js"></script>
+	<!-- Datatable -->
+	<script src="~/datatables/js/jquery.dataTables.js"></script>
+	<script src="~/datatables/js/dataTables.bootstrap4.min.js"></script>
+
+	<!-- Datatable config-->
+	<script src="~/js/globalconfig.datatables.js" asp-append-version="true"></script>
+
+	<!-- Modaljs -->
+	<script src="~/js/modal.js" asp-append-version="true"></script>
+	@*axios*@
+	<script src="~/lib/axios/axios.js"></script>
+	@await RenderSectionAsync("script", false)
+
+</body>
+</html>

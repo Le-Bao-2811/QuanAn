@@ -1,0 +1,5 @@
+﻿@model ICollection<QuanAnGiaDinh.DTOs.TheLoaiMenu>
+@foreach(var i in Model)
+			{
+				<option value="@i.Id">@i.TheLoai</option>
+			}

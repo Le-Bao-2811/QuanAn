@@ -1,0 +1,54 @@
+﻿
+@{
+	ViewData["Title"] = "Kho Quán";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="col-12">
+	<div class="mt-4 mb-4">
+		<button class="btn btn-primary js-add-or-update">Thêm dữ liệu</button>
+	</div>
+	<div>
+		<table id="tbKhoQuan" class="table table-hover table-bordered w-100">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Tên thực phẩm</th>
+					<th>Trạng thái</th>
+					<th>Số lượng</th>
+					<th>Danh mục</th>
+					<th class="fit"></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>Id</th>
+					<th>Tên thực phẩm</th>
+					<th>Trạng thái</th>
+					<th>Số lượng</th>
+					<th>Danh mục</th>
+					<th></th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</div>
+<partial name="_AddorUpdate" />
+<div class="d-none js-placeholder">
+	<div class="btn-group" role="group">
+		<a href="#" class="btn btn-sm btn-outline-secondary">
+			<i class="fa fa-fw fa-eye"></i>
+		</a>
+		<a href="#" class="btn btn-sm btn-outline-secondary js-add-or-update">
+			<i class="fa fa-fw fa-edit"></i>
+		</a>
+		<a href="#" class="btn btn-sm btn-outline-secondary js-delete">
+			<i class="fa fa-fw fa-trash"></i>
+		</a>
+	</div>
+</div>
+<a class=" btn btn-primary" asp-action="Index" asp-controller="MaHang" asp-area="Admin">Danh mục hàng hóa</a>
+@section script
+{
+	<script src="~/Admin/KhoQuan/KhoQuan.js" asp-append-version="true"></script>
+}
+

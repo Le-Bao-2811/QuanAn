@@ -1,0 +1,49 @@
+﻿
+@{
+	ViewData["Title"] = "Khu vực làm việc";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="col-12">
+	<div class="mt-4 mb-4">
+		<button class="btn btn-primary js-add-or-update">Thêm dữ liệu</button>
+	</div>
+	<div>
+		<table id="tbKVLV" class="table table-hover table-bordered w-100">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>KV làm việc</th>
+					<th class="fit"></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>Id</th>
+					<th>KV làm việc</th>
+					<th></th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</div>
+<partial name="_AddorUpdate" />
+<div class="d-none js-placeholder">
+	<div class="btn-group" role="group">
+		<a href="#" class="btn btn-sm btn-outline-secondary">
+			<i class="fa fa-fw fa-eye"></i>
+		</a>
+		<a href="#" class="btn btn-sm btn-outline-secondary js-add-or-update">
+			<i class="fa fa-fw fa-edit"></i>
+		</a>
+		<a href="#" class="btn btn-sm btn-outline-secondary js-delete">
+			<i class="fa fa-fw fa-trash"></i>
+		</a>
+	</div>
+</div>
+
+@section script
+{
+	<script src="~/Admin/KVLamViec/KVLamviec.js" asp-append-version="true"></script>
+}
+
+

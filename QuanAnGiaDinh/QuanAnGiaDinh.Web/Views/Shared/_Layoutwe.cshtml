@@ -1,0 +1,19 @@
+﻿
+<div class="navbar navbar-expand-lg bg-light navbar-light">
+	<div class="container-fluid">
+		<a href="index.html" class="navbar-brand">Hạo Gia <span>Quán</span></a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+			<div class="navbar-nav ml-auto">
+				<a asp-action="Index" asp-controller="Home" class="nav-item nav-link active">Trang chủ</a>
+				<a asp-action="Menu" asp-controller="Home" class="nav-item nav-link">Món chính</a>
+				<a asp-action="MenuFastfood" asp-controller="Home" class="nav-item nav-link">Thức ăn nhanh</a>
+				<a asp-action="MenuDrink" asp-controller="Home" class="nav-item nav-link">Nước uống </a>
+				<a asp-action="Login" asp-controller="User" asp-area="Admin" class="nav-item nav-link">Đăng nhập</a>
+				<a><p><i class="fas fa-cart-plus show-cart"></i><sup>0</sup></p></a>
+			</div>
+		</div>
+	</div>
+</div>

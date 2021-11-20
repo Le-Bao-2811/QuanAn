@@ -1,0 +1,68 @@
+﻿@using QuanAnGiaDinh.Web.Areas.Admin.ViewModels
+@{
+	var className = "text-dark d-block text-decoration-none";
+
+	var menu = new List<MenuItemVM>
+{
+		new MenuItemVM("Dashboard","fa-tachometer-alt", "dashboard"),
+		new MenuItemVM("Menu 1","fa-home"),
+		new MenuItemVM("Kho Quán", "fa-newspaper", "Admin", "Index", "KhoQuan"),
+		new MenuItemVM("Menu", "fa-list", "", "Index", "Menu"),
+		new MenuItemVM("Nhân Viên", "fa-user-alt", "", "Index", "NhanVien")
+	};
+
+	var currentController = this.ViewContext.RouteData.Values["controller"].ToString();
+	// var currentAction = this.ViewContext.RouteData.Values["action"].ToString();
+	var active = "";
+}
+
+
+<nav class="border-right width-325px">
+	<div class="p-5">
+		@*Icon here*@
+	</div>
+	<ul class="list-group list-group-flush mt-2">
+		<li class="list-group-item">
+			<a class="btn" asp-action="Index" asp-controller="Home" asp-area=""><i class="fas fa-home"></i>Trang chủ</a>
+		</li>
+	</ul>
+	<ul class="list-group list-group-flush mt-2">
+		@foreach (var item in menu)
+		{
+			if (item.ControllerName == currentController)
+			{
+				active = "active";
+			}
+			else
+			{
+				active = "";
+			}
+			<li class="list-group-item @active">
+				@if (item.Childs != null && item.Childs.Count > 0)
+				{
+					<a class="@className" data-toggle="collapse" data-target="#@item.IdAttr"
+					   asp-action="@item.ActionName" asp-controller="@item.ControllerName">
+						<i class="fas fa-fw @item.Icon"></i>&nbsp;<span>@item.Text</span>
+					</a>
+					<ul class="list-unstyled pl-4 collapse" id="@item.IdAttr">
+						@foreach (var child in item.Childs)
+						{
+							<li class="pt-2">
+								<a class="@className" asp-action="@child.ActionName" asp-controller="@child.ControllerName" asp-area="Admin">@child.Text</a>
+							</li>
+
+						}
+					</ul>
+				}
+				else
+				{
+					<a class="@className" id="@item.IdAttr" asp-area="Admin" asp-action="@item.ActionName" asp-controller="@item.ControllerName">
+						<i class="fas fa-fw @item.Icon"></i>&nbsp;<span>@item.Text</span>
+					</a>
+				}
+
+			</li>
+		}
+	</ul>
+
+</nav>
