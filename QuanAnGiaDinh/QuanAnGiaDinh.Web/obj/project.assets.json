@@ -7515,11 +7515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\QuanAnGiaDinh.Web.csproj",
+      "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\QuanAnGiaDinh.Web.csproj",
       "projectName": "QuanAnGiaDinh.Web",
-      "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\QuanAnGiaDinh.Web.csproj",
+      "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\QuanAnGiaDinh.Web.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\obj\\",
+      "outputPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7536,14 +7536,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj": {
-              "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj"
+            "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj": {
+              "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj"
             },
-            "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj": {
-              "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj"
+            "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj": {
+              "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj"
             },
-            "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {
-              "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj"
+            "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {
+              "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj"
             }
           }
         }

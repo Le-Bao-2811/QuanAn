@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = QuanAnGiaDinh.DTOs
-build_property.ProjectDir = D:\hoaibao\DuAN\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\
+build_property.ProjectDir = D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QVih1QNjqx4EAYAiOcP2YmcZrHVXozPETIJznhDo/VNzWsOCHRHItT/RfQXtoRrnR9ZZwMD4cOHGUJth13nT8w==",
+  "dgSpecHash": "D5mjxVWIRjdZ1qbxs0jPwHDZQfMJ9O6Yod8QySnc2baqJjSC9ojazjhjK5044EiMO5n6BvLW7eXuQYmK06HEUQ==",
   "success": true,
-  "projectFilePath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\QuanAnGiaDinh.Web.csproj",
+  "projectFilePath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\QuanAnGiaDinh.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

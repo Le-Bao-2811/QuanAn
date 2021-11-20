@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {}
+    "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {}
   },
   "projects": {
-    "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {
+    "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj",
+        "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj",
         "projectName": "QuanAnGiaDinh.Shared",
-        "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj",
+        "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\obj\\",
+        "outputPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

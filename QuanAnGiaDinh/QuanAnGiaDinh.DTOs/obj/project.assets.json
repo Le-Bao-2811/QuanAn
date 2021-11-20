@@ -5870,11 +5870,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj",
+      "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj",
       "projectName": "QuanAnGiaDinh.DTOs",
-      "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj",
+      "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\obj\\",
+      "outputPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

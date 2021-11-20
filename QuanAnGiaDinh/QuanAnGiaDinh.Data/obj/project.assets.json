@@ -6081,11 +6081,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj",
+      "projectUniqueName": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj",
       "projectName": "QuanAnGiaDinh.Data",
-      "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj",
+      "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\QuanAnGiaDinh.Data.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\obj\\",
+      "outputPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6102,11 +6102,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj": {
-              "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj"
+            "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj": {
+              "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj"
             },
-            "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {
-              "projectPath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj"
+            "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj": {
+              "projectPath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Shared\\QuanAnGiaDinh.Shared.csproj"
             }
           }
         }

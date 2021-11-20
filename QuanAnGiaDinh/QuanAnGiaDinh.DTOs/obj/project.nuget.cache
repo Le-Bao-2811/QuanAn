@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F6C+ijISAg6VJVZl8e+ENVTnnlUXYIvxebbyhWAZT8VanYfw26VgiYwy6CRWh951ZDGqHIPpVHosoxODfk/TOg==",
+  "dgSpecHash": "cKt2Pt01xpWIVKvZueS1TDKADgcJa98X6+NZsS0n0CNF84YHjE7CqY+TrJqiGCnmmu3tQLT3ap0gkn9c9LKHdQ==",
   "success": true,
-  "projectFilePath": "D:\\hoaibao\\DuAN\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj",
+  "projectFilePath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.DTOs\\QuanAnGiaDinh.DTOs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.10\\microsoft.aspnetcore.http.features.5.0.10.nupkg.sha512",
