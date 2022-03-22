@@ -10,8 +10,8 @@ namespace QuanAnGiaDinh.Data.Services.Admin
 	{
 		public TheLoaiMenuService():base()
 		{
-			this.NOT_DELETED_CONDITION = "TheLoai!=NULL";
-			this.DELETE_STATEMENT = "TheLoai=NULL";
+			this.NOT_DELETED_CONDITION = "TheLoai!=\"Không tồn tại\"";
+			this.DELETE_STATEMENT = "TheLoai=N\"Không tồn tại\"";
 		}
 	}
 }

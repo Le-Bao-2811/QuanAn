@@ -70,25 +70,31 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 		public PartialViewResult _AddorUpdate()
 		{
 			QuanAnGiaDinhDbContext db = new QuanAnGiaDinhDbContext();
-			var danhsach=db.TheLoaiMenu.ToList();
-			ViewBag.Theloai = new SelectList(danhsach, "Id", "TheLoai");
 			return PartialView("_AddorUpdate"); 
 		}
 		[HttpPost]
 		public async Task<IActionResult>_AddorUpdate(MenuVM menuVM)
 		{
-			
-			if(menuVM.Id==0)
+            try
+            {
+
+			if (menuVM.Hinh != null)
 			{
-				if (menuVM.Hinh != null)
-				{
-					string image = UploadImgAndReturnPath(menuVM.Hinh, "/img/menu/");
-					image = image.Split('/').Last();
-					menuVM.duongdan = image;
-				}
+				string image = UploadImgAndReturnPath(menuVM.Hinh, "/img/menu/");
+				image = image.Split('/').Last();
+				menuVM.duongdan = image;
+			}
+			if (menuVM.Id==0)
+			{				
 				return Ok(await dbService.AddAsync<Menu, MenuVM>(menuVM));
 			}
 			return Ok(await dbService.UpdateAsync<Menu, MenuVM>(menuVM));
+            }
+			catch(Exception ex)
+            {
+				Console.Write(ex);
+				return Ok(false);
+            }
 		}
 		public async Task<IActionResult>Delete(int id)
 		{

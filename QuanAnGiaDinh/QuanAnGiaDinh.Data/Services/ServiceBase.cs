@@ -82,7 +82,7 @@ namespace QuanAnGiaDinh.Data.Services
 
 		public PagedResult GetPagedList<TTable, TModel>(int page, int size) where TModel : class where TTable : class
 		{
-			var query = db.Set<TTable>()
+			 var query = db.Set<TTable>()
 						.AsNoTracking()
 						.Where(NOT_DELETED_CONDITION)
 						.Select(this.GetSelectedFields<TModel>())

@@ -57,7 +57,7 @@
 		confirm("Xác nhận xóa dư liệu", function () {
 			$.ajax({
 				type: "DELETE",
-				url: "/admin/danhmuc/delete",
+				url: "/admin/danhmucmenu/delete",
 				data: { id: id },
 				dataType: "json",
 				success: function (reponse) {

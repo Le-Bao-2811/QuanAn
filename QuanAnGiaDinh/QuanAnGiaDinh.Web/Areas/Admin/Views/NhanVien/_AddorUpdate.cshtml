@@ -17,12 +17,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="IdChucVuNV" class="control-label"></label>
-                <input asp-for="IdChucVuNV" class="form-control" />
+                <select asp-for="IdChucVuNV"  class="form-control">
+                    <vc:danh-sach-chuc-vu />
+                </select>
                 <span asp-validation-for="IdChucVuNV" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IdKVucLamViec" class="control-label"></label>
-                <input asp-for="IdKVucLamViec" class="form-control" />
+                <select asp-for="IdKVucLamViec"  class="form-control">
+                    <vc:danh-sach-kvlv />
+                </select>
                 <span asp-validation-for="IdKVucLamViec" class="text-danger"></span>
             </div>
         </form>

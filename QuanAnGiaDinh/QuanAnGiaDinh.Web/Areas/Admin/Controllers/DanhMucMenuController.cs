@@ -57,7 +57,7 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 		[HttpDelete]
 		public async Task<IActionResult> Delete(int id)
 		{
-			return Ok(await dbService.DeleteAsync<ChucVu>(id));
+			return Ok(await dbService.DeleteAsync<DanhMucMenu>(id));
 		}
 
 	}

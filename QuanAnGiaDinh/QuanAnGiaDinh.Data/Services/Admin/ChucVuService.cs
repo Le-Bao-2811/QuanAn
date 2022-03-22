@@ -10,8 +10,8 @@ namespace QuanAnGiaDinh.Data.Services.Admin
 	{
 	 public	ChucVuService(): base()
 		{
-			this.NOT_DELETED_CONDITION = "ChucVuNV!=NULL";
-			this.DELETE_STATEMENT = "ChucVuNV=NULL";
+			this.NOT_DELETED_CONDITION = "ChucVuNV!=\"Không tồn tại\"";
+			this.DELETE_STATEMENT = "ChucVuNV=N\"Không tồn tại\"";
 		}
 	}
 }

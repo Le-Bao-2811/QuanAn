@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using QuanAnGiaDinh.Data;
 using QuanAnGiaDinh.Data.Services;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,12 @@ namespace QuanAnGiaDinh.Web.Controllers
 		protected readonly IWebHostEnvironment Host;
 		//Đăng ký dịch vụ trong phương thức khởi tạo
 		protected ServiceBase dbService;
-		public QuanAnGiaDinhController(IWebHostEnvironment _host)
+		protected QuanAnGiaDinhDbContext db;
+		public QuanAnGiaDinhController(IWebHostEnvironment _host,QuanAnGiaDinhDbContext _db)
 		{
 			Host = _host;
 			dbService = new ServiceBase();
+			db = _db;
 		}
 
 		protected IActionResult ForDatatable(int inDraw, PagedResult data)

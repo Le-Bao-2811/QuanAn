@@ -2,7 +2,6 @@
 	width: 50%;
 	margin: auto;
 	text-align: center;
-	padding-top: 30px;
 }
 
 	.card h2 {
@@ -32,7 +31,7 @@
 /* ================== nav bar============= */
 .card {
 	position: fixed;
-	height: 100vh;
+	height: 100%;
 	width: 400px;
 	right: 0;
 	top: 0;
@@ -41,8 +40,7 @@
 	overflow: scroll;
 	right: -100%;
 	transition: 0.3s;
-	margin-top:93px;
-	z-index:3;
+	z-index:1000;
 }
 
 	.card button {

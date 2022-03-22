@@ -7,6 +7,7 @@ using System.Text;
 
 namespace QuanAnGiaDinh.DTOs
 {
+	[Table("KhoQuan")]
 	public class KhoQuan
 	{
 		[Key]
@@ -19,14 +20,18 @@ namespace QuanAnGiaDinh.DTOs
 		public int Soluong { get; set; }
 		[DisplayName("Mã hàng")]
 		public int? MahangId { get; set; }
-		[DisplayName("Ngày nhập")]
+        public int? idTaiKhoan { get; set; }
+        [DisplayName("Ngày nhập")]
 		public DateTime? ngaynhap { get; set; }
-		public int? DisplayOrder { get; set; }
+        public int TongSoLuong { get; set; }
+        public int? DisplayOrder { get; set; }
 
 		[ForeignKey(nameof(MahangId))]
 		public MaHang maHang { get; set; }
 
 		[ForeignKey(nameof(IdTrangThai))]
 		public TrangThaiKho trangThaiKho { get; set; }
+		[ForeignKey(nameof(idTaiKhoan))]
+		public TaiKhoan taiKhoan { get; set; }
 	}
 }

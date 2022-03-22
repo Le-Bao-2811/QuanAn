@@ -7,7 +7,6 @@ $(document).ready(function () {
 		columns: [
 			{ data: "id" },
 			{ data: "loaiHang" },
-			{ data: "kg" },
 			{ data: null, defaultContent: $(".js-placeholder").html() }
 		],
 	});

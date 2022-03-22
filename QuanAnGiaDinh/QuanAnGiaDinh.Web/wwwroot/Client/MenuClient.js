@@ -32,7 +32,13 @@ $(document).on("click", ".datban", function () {
 	$.post("/home/add", data,
 		function (data, textStatus, jqXHR) {
 			if (data == true) {
-				alert("Đặt bàn thành công, nhân viên quán sẽ sớm gọi xác nhận đến bạn")
+				Swal.fire(
+					'Đặt bàn thành công',
+					'Ấn ok tiếp tục!',
+					'success'
+				).then(() => {
+					window.location.href = "/home/index"
+				})
 			}
 			else {
 				alert("Thất bại");
@@ -42,45 +48,4 @@ $(document).on("click", ".datban", function () {
 	);
 });
 
-$(document).on("click", "#buy", function (ev) {
 
-
-	//lấy tổng tiền bên giỏ hàng
-	var tongtien = document.querySelector(".money-modal")//Lấy ra cái thẻ input
-	var money = document.querySelector(".money-cart").innerHTML //Lấy đc 1 con số ví dụ 123
-	console.log(tongtien)
-	tongtien.value = money
-	
-
-	var menu = document.querySelectorAll(".menu-cart")
-	var monan = "";
-	for (var i = 0; i < menu.length; i++) {
-		if (i == menu.length - 1) {
-			monan = monan + menu[i].innerHTML;
-		}
-		else {
-			monan = monan + menu[i].innerHTML + ",";
-		}
-
-	}
-	var inputmenu = document.querySelector(".input-menu")
-	inputmenu.value = monan
-	
-	
-	
-})
-$(document).on("click", ".dathang", function () {
-	var data = $('#form-dathang').serialize()
-	$.post("/home/_adddathang", data, function (data, textStatus, jqXHR) {
-		if (data = true) {
-			alert("Cập nhật thành công");
-			setInterval(() => {
-				location.reload()
-			}, 1000)
-		}
-		else {
-			alert("Cập nhật thất bại")
-		}
-	})
-	
-})

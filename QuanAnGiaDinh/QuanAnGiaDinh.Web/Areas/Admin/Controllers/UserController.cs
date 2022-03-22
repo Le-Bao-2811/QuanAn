@@ -41,10 +41,10 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 					var pwByte = Encoding.UTF8.GetBytes(addUserVM.Password);
 					user.PasswordHash = hmac.ComputeHash(pwByte);
 					user.PasswordSalt = hmac.Key;
-
 					user.User = addUserVM.UserName.Replace(" ", "").ToLower();
 					user.FullName = addUserVM.FullName;
 					user.CreateDate = DateTime.Now;
+					user.IsAdmin = addUserVM.Isadmin;
 
 					await db.taiKhoans.AddAsync(user);
 					await db.SaveChangesAsync();
@@ -58,7 +58,7 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 			{
 				TempData["Eror"] = "Đã xảy ra lỗi trong quá trình đăng ký tài khoản";
 			}
-			return RedirectToAction(nameof(SignUp));
+			return RedirectToAction(nameof(Login));
 		}
 		public IActionResult Login()
 		{
@@ -82,7 +82,8 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 					{
 						new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
 						new Claim(ClaimTypes.Name,user.User),
-						new Claim(ClaimTypes.GivenName,user.FullName)
+						new Claim(ClaimTypes.GivenName,user.FullName),
+						new Claim(ClaimTypes.Role,user.IsAdmin? "Admin" : "Member" )
 					};
 					var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
 					var principal = new ClaimsPrincipal(claimsIdentity);
@@ -92,14 +93,25 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 						IsPersistent = model.Check
 					};
 					await HttpContext.SignInAsync("Cookies", principal, authProperty); // startup đăng kí chữ j thì bên đăy đăng nhập chữ đó
-					return RedirectToAction("Index", "NhanVien");
 				}
+                if (user.IsAdmin)
+                {
+					return RedirectToAction("Index", "Menu");
+                }
+                else
+                {
+					return RedirectToAction("Index","Home",new { area=""});
+                }
 			}
 			else
 			{
-
+				return RedirectToAction(nameof(Login));
 			}
-			return RedirectToAction(nameof(Login));
+		}
+		public async Task<IActionResult> Logout()
+		{
+			await HttpContext.SignOutAsync("Cookies");
+			return RedirectToAction("Index", "Home",new {area="" }) ;
 		}
 	}
 }

@@ -10,8 +10,8 @@ namespace QuanAnGiaDinh.Data.Services.Admin
 	{
 		public KVLamViecService():base()
 		{
-			this.NOT_DELETED_CONDITION = "KVucLamViec!=NULL";
-			this.DELETE_STATEMENT = "KVucLamViec=NULL";
+			this.NOT_DELETED_CONDITION = "KVucLamViec!=\"Không tồn tại\"";
+			this.DELETE_STATEMENT = "KVucLamViec=N\"Không tồn tại\"";
 		}
 	}
 }

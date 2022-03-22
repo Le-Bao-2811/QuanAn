@@ -9,23 +9,30 @@ using System.Threading.Tasks;
 
 namespace QuanAnGiaDinh.DTOs
 {
+	[Table("NhanVien")]
 	public class NhanVien
 	{
 		[Key]
 		public int Id { get; set; }
 		[DisplayName("Họ Và Tên")]
 		public string	HoTen { get; set; }
-		[DisplayName("Chức vụ")]
+        public string Diachi { get; set; }
+        public string SDT { get; set; }
+        [DisplayName("Chức vụ")]
 		public int? IdChucVuNV { get; set; }
 		[DisplayName("Khu vực làm việc")]
 		public int? IdKVucLamViec { get; set; }
 		[DisplayName("Ngày vào làm")]
 		public DateTime? NgayVaoLam { get; set; }
 		public int Luong { get; set; }
-		public int? DisplayOrder { get; set; }
+		public string duongdanimg { get; set; }
+        public int? idTaiKhoan { get; set; }
+        public int? DisplayOrder { get; set; }
 		[ForeignKey(nameof(IdKVucLamViec))]
 		public KVLamViec KVLamViec { get; set; }
 		[ForeignKey(nameof(IdChucVuNV))]
 		public ChucVu ChucVu { get; set; }
+		[ForeignKey(nameof(idTaiKhoan))]
+		public TaiKhoan taiKhoan { get; set; }
 	}
 }

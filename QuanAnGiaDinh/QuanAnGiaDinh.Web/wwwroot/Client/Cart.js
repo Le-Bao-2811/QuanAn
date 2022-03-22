@@ -34,53 +34,32 @@ const split = () => {
 			intArr.push(interger);
 		}
 	}
-
-	var cart = document.querySelectorAll(".add-card")
-	console.log(cart)
-	var arrbtn = []
-	for (var i = 0; i < cart.length; i++) {
-		var btn = cart[i].getAttribute("data-id")
-		arrbtn.push(btn)
-	}
-	// console.log(intArr.length);
-	var a = [];
-	for (var i = 0; i < intArr.length; i++) {
-		//console.log("vbbbbbnbnbnbbbday la the i " +i+ " : "+intArr[i]);  
-		for (var j = 0; j < arrbtn.length; j++) {
-			if (intArr[i] === arrbtn[j]) {
-				// console.log("Bang nhau "+ i+ j+ intArr[i]+arrbtn[j]) 
-			}
-			// console.log("day la the j " +j+ " : " +arrbtn[j]);                     
-		}
-	}
-
-
 }
 
 
-
+// thêm sản phẩm vào giỏ hàng
 $(document).on("click", ".add-cart", function (ev) {
 	var current = ev.currentTarget;
 
 	var idadd = current.getAttribute('data-id');
 	setCookie('products_' + idadd, idadd, 200);
 	split();
-
+	getcart();
 	//AddCart(ThucDon, Price, Img)
 })
 
 
 
-
+// xóa cookies đễ xóa sản phẩm trong giỏ hàng
 $(document).on("click", ".delete", function (ev) {
-	var taget = ev.target
-	var parent = taget.parentElement;
-	parent.remove()
-	totalprice()
+	var data = ev.target;
+	var id = data.getAttribute("data-id")
+	setCookie("products_" + id, 0, -1);
+	getcart();
+	totalprice();
 })
-
+// mở và đóng cái giỏ hàng
 const cartbtn = document.querySelector(".fa-times")
-console.log(cartbtn);
 const cartShow = document.querySelector(".fa-cart-plus")
 cartShow.addEventListener("click", function () {
 	document.querySelector(".card").style.right = "0"
@@ -89,9 +68,25 @@ cartbtn.addEventListener("click", function () {
 	document.querySelector(".card").style.right = "-100%"
 })
 
+$(document).on("click", "#buy", () => {
+	const soluong = document.querySelectorAll(".input");
+	const allCookie = document.cookie;
+	const cookieArray = allCookie.split(';');
+	var j = 0;
+	for (var i = 0; i < cookieArray.length; i++) {
+		if (cookieArray[i].indexOf("products_") != -1) {
+			var id = parseInt(cookieArray[i].replace("products_", "").split("=")[0].trim())
+			setCookie("products_" + id, parseInt(soluong[j].value))
+			j++;
+		}
+	};
+})
 
-
-$(document).on('click', '.show-cart', function () {
+window.addEventListener("load", () => {
+	getcart();
+})
+// get cái id trên cookies tìm trong db để xuất ra màn hình
+function getcart() {
 	const allCookie = document.cookie;
 	const cookieArray = allCookie.split(';');
 	var newArrayCookie = [];
@@ -100,44 +95,55 @@ $(document).on('click', '.show-cart', function () {
 			newArrayCookie.push(parseInt(cookieArray[i].replace("products_", "").split("=")[0].trim()));
 		}
 	};
-	
-	$.post('/tab/cart', { idList: newArrayCookie }, function (data, a, b) {
-		console.log(data);
-		if (data.length > 0) {
-			const tbody = document.querySelector("#cart-body");
-			tbody.innerHTML = "";
-			console.log(tbody);
-			for (var i = 0; i < data.length; i++) {
-				const { giaTien, thucDon, hinh, duongdan } = data[i];
-				var html = `<tr>
-						<td style="display: flex; align-items: center;"><img style="width:70px" src="/img/menu/${duongdan}" alt=""><p class="menu-cart">${thucDon}</p></td>
+	if (newArrayCookie.length == 0) {
+		const tbody = document.querySelector("#cart-body");
+		tbody.innerHTML = ""
+		totalprice()
+	}
+	else {
+		$.post('/tab/cart', { idList: newArrayCookie }, function (data, a, b) {
+			if (data.length > 0) {
+				const tbody = document.querySelector("#cart-body");
+				tbody.innerHTML = "";
+				console.log(tbody);
+				for (var i = 0; i < data.length; i++) {
+					const { giaTien, thucDon, hinh, duongdan, id } = data[i];
+					var html = `<tr>
+						<td style="display: flex; align-items: center;"><img style="width:70px" src="/img/menu/${duongdan}" alt=""><p class="menu-cart ml-1">${thucDon}</p></td>
 						<td> <p><span class="abc">${giaTien}</span><sup>đ</sup></p></td>
 						<td><input class="input" style="width:30px;outline:none;" type="number" value="1" min="1"></td>
-						<td style="cursor: pointer;">Xóa</td>
+						<td data-id="${id}" class="delete" style="cursor: pointer;">Xóa</td>
 					</tr>`;
-				tbody.insertAdjacentHTML('beforeend', html);
+					tbody.insertAdjacentHTML('beforeend', html);
+				}
 			}
-		}
-		inputchange()
-		totalprice()
-	});
-	
-})
+			inputchange()
+			totalprice()
+		});
+	}
+}
+// tính tổng số tiền trên giao diện
 function totalprice() {
 	var price = document.querySelectorAll("tbody tr")
 	var tong = 0;
 	var dem = 0;
-	for (var i = 0; i < price.length; i++) {
-		var gia = price[i].querySelector(".abc").innerHTML;
-		var soluong = price[i].querySelector("input").value;
-		tong = tong + (gia * soluong)
-		dem++;
+	if (price.length != 0) {
+		for (var i = 0; i < price.length; i++) {
+			var gia = price[i].querySelector(".abc").innerHTML;
+			var soluong = price[i].querySelector("input").value;
+			tong = tong + (gia * soluong)
+			dem++;
+		}
 	}
+	else {
+		tong = 0;
+    }
 	var total = document.querySelector(".price-total span")
 	var demp = document.querySelector(".navbar-nav sup")
 	demp.innerHTML = dem;
 	total.innerHTML = tong
 }
+// sự kiện thay đổi số lượng sản phẩm để thay đổi lại tổng số tiền
 function inputchange() {
 	var cartitem = document.querySelectorAll("tbody tr")
 	for (var i = 0; i < cartitem.length; i++) {

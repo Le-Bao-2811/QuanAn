@@ -21,5 +21,6 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.ViewModels.TaiKhoan
 		public string ComfirmPassword { get; set; }
 		[Required(ErrorMessage = "Dữ liệu này là bắt buộc")]
 		public string FullName { get; set; }
-	}
+        public bool Isadmin { get; set; }
+    }
 }

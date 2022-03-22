@@ -1,0 +1,6 @@
+﻿@model ICollection<QuanAnGiaDinh.DTOs.KVLamViec>
+@foreach (var i in Model)
+{
+	<option value="@i.Id">@i.KVucLamViec</option>
+}
+

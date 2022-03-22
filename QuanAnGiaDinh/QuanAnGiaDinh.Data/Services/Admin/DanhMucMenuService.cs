@@ -10,8 +10,8 @@ namespace QuanAnGiaDinh.Data.Services.Admin
 	{
 		public DanhMucMenuService():base()
 		{
-			this.NOT_DELETED_CONDITION = " DanhMuc!=NULL";
-			this.DELETE_STATEMENT = " DanhMuc=NULL";
+			this.NOT_DELETED_CONDITION = " DanhMuc!= \"Không tồn tại\"";
+			this.DELETE_STATEMENT = " DanhMuc= N'Không tồn tại'";
 		}
 		
 	}

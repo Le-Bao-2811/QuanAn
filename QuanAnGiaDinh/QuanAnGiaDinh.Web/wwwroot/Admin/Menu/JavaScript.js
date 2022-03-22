@@ -22,15 +22,16 @@ $(document).ready(function () {
 		modal.appendBody($("#_AddorUpdate").html());
 		modal.setDefaultFooterButton("Lưu", "Hủy");
 		var form = modal.modalBody.find("form");
+		console.log(form.find("#Id"))
 		//update
 		if ($(ev.currentTarget.parentElement.parentElement).attr('update') == '') {
 			id = $(ev.currentTarget).closest("td").attr("data-id");
 			$.get("/admin/Menu/get", { id: id },
 				function (data, textStatus, jsXHR) {
 					form.find("#Id").val(data.id);
-					form.find("#ChucVu").val(data.chucVu);
+					form.find("#ThucDon").val(data.thucDon);
 					form.find("#IdDanhMuc").val(data.idDanhMuc);
-					form.find("#IdTheLoai").val(data.idTheThoai);
+					form.find("#IdTheLoai").val(data.idTheLoai);
 					form.find("#GiaTien").val(data.giaTien);
 				},
 				"json"

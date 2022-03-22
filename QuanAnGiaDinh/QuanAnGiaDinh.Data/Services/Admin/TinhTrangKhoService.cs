@@ -8,7 +8,7 @@ namespace QuanAnGiaDinh.Data.Services.Admin
 		{
 			public TinhTrangKhoService() : base()
 			{
-				this.NOT_DELETED_CONDITION = "TrangThai!=NULL";
+				this.NOT_DELETED_CONDITION = "TrangThai!=\"Không tồn tại\"";
 			}
 		}
 	
