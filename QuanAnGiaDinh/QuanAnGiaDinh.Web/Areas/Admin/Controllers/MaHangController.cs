@@ -45,6 +45,7 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 		{
 			if(maHangVM.Id==0)
 			{
+				maHangVM.TongSoLuong = 0;
 				return Ok(await dbService.AddAsync<MaHang, MaHangVM>(maHangVM));
 			}	
 			return Ok( await dbService.UpdateAsync<MaHang, MaHangVM>(maHangVM));

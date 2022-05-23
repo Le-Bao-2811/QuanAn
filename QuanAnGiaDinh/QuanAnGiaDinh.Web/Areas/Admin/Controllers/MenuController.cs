@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using DiffMatchPatch;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -99,6 +100,21 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 		public async Task<IActionResult>Delete(int id)
 		{
 			return Ok(await dbService.DeleteAsync<Menu>(id));
+		}
+		public IActionResult CheckString(string monan)
+        {
+			QuanAnGiaDinhDbContext db = new QuanAnGiaDinhDbContext();
+			var data = db.Menu.ToList();
+			diff_match_patch dmp = new diff_match_patch();
+			List<Diff> check=new List<Diff>();
+			foreach (var item in data)
+            {
+				List<Diff> diff = dmp.diff_main(item.ThucDon,monan);
+				dmp.diff_cleanupSemantic(diff);				
+            }
+			// Result: [(-1, "Hell"), (1, "G"), (0, "o"), (1, "odbye"), (0, " World.")]
+			// Result: [(-1, "Hello"), (1, "Goodbye"), (0, " World.")]
+			return new JsonResult(check);
 		}
 	}
 }

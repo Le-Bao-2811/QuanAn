@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "QuanAnGiaDinh.Web/1.0.0": {
         "dependencies": {
+          "DiffMatchPatch": "1.0.3",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.4",
           "Microsoft.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore.Design": "5.0.7",
@@ -340,6 +341,17 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "DiffMatchPatch/1.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/DiffMatchPatch.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/DiffMatchPatch.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -3660,6 +3672,13 @@
       "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "DiffMatchPatch/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DuRsBvn53lNZZv1dXWNpeA4wV9AM/f+RX1bNtpa8KF3GkFTdTreE2z9no+9BOrscPBsNggu/YQ/nXLnkUSVdDQ==",
+      "path": "diffmatchpatch/1.0.3",
+      "hashPath": "diffmatchpatch.1.0.3.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

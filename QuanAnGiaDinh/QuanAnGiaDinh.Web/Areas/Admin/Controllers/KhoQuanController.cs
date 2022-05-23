@@ -9,6 +9,8 @@ using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
 using QuanAnGiaDinh.Data.Services.Admin;
+using QuanAnGiaDinh.Web.Areas.Admin.ViewModels.MaHang;
+using QuanAnGiaDinh.Data;
 
 namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 {
@@ -45,12 +47,23 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 		[HttpPost]
 		public async Task<IActionResult> AddorUpdate(KhoQuanVM khoQuanVM)
 		{
+            try
+            {
 			if(khoQuanVM.Id==0)
 			{
-				khoQuanVM.ngaynhap = DateTime.Now;
+				QuanAnGiaDinhDbContext db = new QuanAnGiaDinhDbContext();
+                    var data = db.MaHang.Find(khoQuanVM.MahangId);
+					data.TongSoLuong = data.TongSoLuong + khoQuanVM.Soluong;
+					db.Update(data);
+					db.SaveChanges();
+                    khoQuanVM.ngaynhap = DateTime.Now;
 				return Ok(await dbService.AddAsync<KhoQuan, KhoQuanVM>(khoQuanVM));
 			}
 			return Ok(await dbService.UpdateAsync<KhoQuan, KhoQuanVM>(khoQuanVM));
+            }
+            catch (Exception ex) {
+				return Ok(false);
+			}
 		} // éo hiểu hỏi anh tín nó xàm lol đó mấy này khó sài lắm haha
 		[HttpDelete]
 		public async Task<IActionResult>Delete(int id)

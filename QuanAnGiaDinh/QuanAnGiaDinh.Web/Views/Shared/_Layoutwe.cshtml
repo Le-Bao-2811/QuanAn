@@ -7,10 +7,7 @@
 		</button>
 		<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
 			<div class="navbar-nav ml-auto">
-				<a asp-action="Index" asp-controller="Home" class="nav-item nav-link active">Trang chủ</a>
-				<a asp-action="Menu" asp-controller="Home" class="nav-item nav-link">Món chính</a>
-				<a asp-action="MenuFastfood" asp-controller="Home" class="nav-item nav-link">Thức ăn nhanh</a>
-				<a asp-action="MenuDrink" asp-controller="Home" class="nav-item nav-link">Nước uống </a>
+				<vc:navbar-list-danh-muc />
 				@if (User.Identity.IsAuthenticated)
 				{
 				<div class="btn-group">
@@ -27,7 +24,7 @@
 				{
 					<a asp-action="Login" asp-controller="User" asp-area="Admin" class="nav-item nav-link">Đăng nhập</a>
 				}
-				<a class="m-2"><p><i style="font-size:35px" class="fas fa-cart-plus show-cart"></i><sup style="font-size:22px;color:red">0</sup></p></a>
+				<a class="m-2"><i style="font-size:35px;color:orange" class="fas fa-cart-plus show-cart"></i><sup style="font-size:22px;color:green">0</sup>Giỏ hàng</a>
 			</div>
 		</div>
 	</div>

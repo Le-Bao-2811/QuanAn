@@ -1,0 +1,50 @@
+﻿@model QuanAnGiaDinh.DTOs.DatHang
+
+<div>
+    <h4>DatHang</h4>
+    <hr />
+	<dl class="row">
+
+		<dt class="col-sm-5">
+			@Html.DisplayNameFor(model => model.TenKH)
+		</dt>
+		<dd class="col-sm-7">
+			@Html.DisplayFor(model => model.TenKH)
+		</dd>
+		<dt class="col-sm-5">
+			@Html.DisplayNameFor(model => model.DiaChi)
+		</dt>
+		<dd class="col-sm-7">
+			@Html.DisplayFor(model => model.DiaChi)
+		</dd>
+		<dt class="col-sm-5">
+			@Html.DisplayNameFor(model => model.SDT)
+		</dt>
+		<dd class="col-sm-7">
+			@Html.DisplayFor(model => model.SDT)
+		</dd>
+		<dt class="col-sm-5">
+			@Html.DisplayNameFor(model => model.Sotien)
+		</dt>
+		<dd class="col-sm-7">
+			@Html.DisplayFor(model => model.Sotien)
+		</dd>
+		@foreach (var item in Model.chiTietDonDatHangs)
+		{
+			<dt class="col-sm-5">
+				Tên món
+			</dt>
+			<dd class="col-sm-7">
+				@item.menu.ThucDon
+			</dd>
+			<dt class="col-sm-5">
+				Số lượng
+			</dt>
+			<dd class="col-sm-7">
+				@item.SoLuong
+			</dd>
+		}
+
+
+	</dl>
+</div>

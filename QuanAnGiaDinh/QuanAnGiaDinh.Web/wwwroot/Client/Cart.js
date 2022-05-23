@@ -42,7 +42,7 @@ $(document).on("click", ".add-cart", function (ev) {
 	var current = ev.currentTarget;
 
 	var idadd = current.getAttribute('data-id');
-	setCookie('products_' + idadd, idadd, 200);
+	setCookie('products_' + idadd, 1, 200);
 	split();
 	getcart();
 	//AddCart(ThucDon, Price, Img)
@@ -89,6 +89,7 @@ window.addEventListener("load", () => {
 function getcart() {
 	const allCookie = document.cookie;
 	const cookieArray = allCookie.split(';');
+	console.log(cookieArray);
 	var newArrayCookie = [];
 	for (var i = 0; i < cookieArray.length; i++) {
 		if (cookieArray[i].indexOf("products_") != -1) {
@@ -105,19 +106,25 @@ function getcart() {
 			if (data.length > 0) {
 				const tbody = document.querySelector("#cart-body");
 				tbody.innerHTML = "";
-				console.log(tbody);
 				for (var i = 0; i < data.length; i++) {
-					const { giaTien, thucDon, hinh, duongdan, id } = data[i];
+					const { giaTien, thucDon, duongdan, id } = data[i];
 					var html = `<tr>
-						<td style="display: flex; align-items: center;"><img style="width:70px" src="/img/menu/${duongdan}" alt=""><p class="menu-cart ml-1">${thucDon}</p></td>
-						<td> <p><span class="abc">${giaTien}</span><sup>đ</sup></p></td>
-						<td><input class="input" style="width:30px;outline:none;" type="number" value="1" min="1"></td>
+						<td style="display: flex; align-items: center;">
+							<img style="width:70px" src="/img/menu/${duongdan}" alt="">
+							<p class="menu-cart ml-1">${thucDon}</p>
+							<br>
+							<p style="margin-top: 46px;margin-left: -86px;"><span class="abc">${giaTien.toLocaleString("de-DE")}</span><span>VNĐ</span></p>
+						</td>						
+						<td>							
+									<button style="border-width:0.65px;border-color:black;border-style: solid;margin-top: -3px" data-id="${id}" class="giam btn-minus btn btn-default" type="button">–</button>
+									<input class="input" style="width:30px;outline:none;align-items: center;" type="text" class="input-text number-sidebar gia" value="${getCookie("products_"+id)}" min="1">
+									<button style="border-width:0.65px;border-color:black;border-style: solid;margin-top: -3px" data-id="${id}" class="tang btn-plus btn btn-default" type="button">+</button>							
+						</td>
 						<td data-id="${id}" class="delete" style="cursor: pointer;">Xóa</td>
 					</tr>`;
 					tbody.insertAdjacentHTML('beforeend', html);
 				}
 			}
-			inputchange()
 			totalprice()
 		});
 	}
@@ -137,19 +144,32 @@ function totalprice() {
 	}
 	else {
 		tong = 0;
-    }
+	}
 	var total = document.querySelector(".price-total span")
 	var demp = document.querySelector(".navbar-nav sup")
 	demp.innerHTML = dem;
-	total.innerHTML = tong
+	total.innerHTML = tong.toLocaleString("de-DE")
 }
 // sự kiện thay đổi số lượng sản phẩm để thay đổi lại tổng số tiền
-function inputchange() {
-	var cartitem = document.querySelectorAll("tbody tr")
-	for (var i = 0; i < cartitem.length; i++) {
-		var input = cartitem[i].querySelector(".input")
-		input.addEventListener("change", function (ev) {
-			totalprice()
-		})		
-	}
-}
+$(document).on("click", ".tang", (ev) => {
+	var btn = ev.target
+	var id = btn.getAttribute("data-id");
+	var soluong = parseInt(getCookie("products_" + id)) + 1
+	setCookie("products_" + id, soluong, 200)
+	var td = btn.parentElement
+	var input = td.querySelector("input");
+	input.value = soluong;
+	totalprice();
+})
+
+$(document).on("click", ".giam", (ev) => {
+	var btn = ev.target
+	var id = btn.getAttribute("data-id");
+	var soluong = parseInt(getCookie("products_" + id)) - 1
+	setCookie("products_" + id, soluong, 200)
+	var td = btn.parentElement
+	var input = td.querySelector("input");
+	input.value = soluong;
+	totalprice();
+})
+

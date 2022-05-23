@@ -5,6 +5,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\Controllers\**" />
+    <Content Remove="Areas\Admin\Controllers\**" />
+    <EmbeddedResource Remove="Areas\Admin\Controllers\**" />
+    <None Remove="Areas\Admin\Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Areas\Admin\Controllers\ChucVuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DanhMucMenuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HoatDongController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\KhoQuanController.cs" />
+    <Compile Include="Areas\Admin\Controllers\KVLamViecController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MaHangController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MenuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuanAnGiaDinhAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TheLoaiMenuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TrangThaiKhoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiffMatchPatch" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
@@ -23,7 +47,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
+	  <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\img\menu\" />
     <Folder Include="wwwroot\Layout\" />
   </ItemGroup>

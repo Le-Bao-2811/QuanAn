@@ -4,70 +4,91 @@
     ViewData["Title"] = "ListCart";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+<div class="col-12">
+	<div class="mt-4 mb-4">
+		<h1>ListCart</h1>
+		<br />
+		<a class="btn btn-light" asp-action="ListDatBan" asp-controller="HoatDong">Danh sách đặt bàn</a>
+	</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						Tên khách hàng
+					</th>
+					<th>
+						Địa chỉ
+					</th>
+					<th>
+						Số điện thoại
+					</th>
+					<th>
+						Số tiền
+					</th>
+					<th>
+						Thời gian
+					</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
 
-<h1>ListCart</h1>
+						<td>
+							@Html.DisplayFor(modelItem => item.TenKH)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.DiaChi)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.SDT)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Sotien)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.ThoiGianDatHang)
+						</td>
+						<td>
+							@item.Sotien
+						</td>
+						<td>
+							<button type="button" class="btn btn-light xemdathang" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+								<i class="fas fa-eye"></i>
+							</button>
+							@if (item.Duyet == true)
+							{
+								<button class="btn btn-outline-success duyetdathang" disabled>Đã xác nhận</button>
+							}
+							else
+							{
+								<a class="btn btn-outline-success " asp-action="Duyet" asp-controller="HoatDong" asp-area="Admin" asp-route-id="@item.Id">Chưa xác nhận</a>
+							}
+						</td>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenKH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiaChi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SDT)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sotien)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ThoiGianDatHang)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DisplayOrder)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdTaiKhoan)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenKH)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiaChi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SDT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sotien)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ThoiGianDatHang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DisplayOrder)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdTaiKhoan)
-            </td>     
-        </tr>
-}
-    </tbody>
-</table>
+					</tr>
+				}
+			</tbody>
+		</table>
+		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" id="body">
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+		@section script{
+			<script src="~/Admin/HoatDong/Hoatdong.js" asp-append-version="true"></script>
+		}

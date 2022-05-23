@@ -11,18 +11,52 @@
 		if (data.length > 0) {
 			const tbody = document.querySelector("#load-products");
 			tbody.innerHTML = "";
-			console.log(tbody);
+			const total = document.querySelector('#total-listcart');
+			total.innerHTML = "";
+		
+			var totalgiatien = 0;
 			for (var i = 0; i < data.length; i++) {
 				const { giaTien, thucDon, hinh, duongdan, id } = data[i];
-				
-				var html = `<tr>
-						<td style="display: flex; align-items: center;"><img style="width:70px" src="/img/menu/${duongdan}" alt=""><p class="menu-cart">${thucDon}</p></td>
-						<td> <p><span class="abc">${giaTien}</span><sup>đ</sup></p></td>
-						<td><input class="input" style="width:30px;outline:none;" type="number" value="${getCookie('products_'+id)}" min="1"></td>
-						<td style="cursor: pointer;">Xóa</td>
-					</tr>`;
-				tbody.insertAdjacentHTML('beforeend', html);
+				var gia = giaTien * getCookie("products_" + id);
+				totalgiatien = totalgiatien + gia
+				var html = `<div class="card mb-3">
+									<div class="card-body">
+										<div class="d-flex justify-content-between">
+											<div class="d-flex flex-row align-items-center">
+												<div>
+													<img src="/img/menu/${duongdan}"
+														 class="img-fluid rounded-3"
+														 alt="Shopping item"
+														 style="width: 65px" />
+												</div>
+												<div class="ms-3">
+													<h5>${thucDon}</h5>
+												</div>
+											</div>
+											<div class="d-flex flex-row align-items-center">
+												<div style="width: 50px">
+													<h5 class="fw-normal mb-0">${getCookie("products_" + id)}</h5>
+												</div>
+												<div style="width: 126px">
+													<h5 class="mb-0">${gia.toLocaleString('de-DE')} VNĐ</h5>													
+												</div>
+												<a href="#!" style="color: #cecece">
+													<i class="fas fa-trash-alt"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>`;
+				var htmltotalprice = `
+					<div class="d-flex justify-content-between">
+						<p class="mb-2">${thucDon}</p>
+						<p class="mb-2">${gia.toLocaleString("de-DE")} <span>VNĐ</span></p>
+					</div>
+				`
+				tbody.insertAdjacentHTML('beforeend', html)
+				total.insertAdjacentHTML('beforeend', htmltotalprice)
 			}
+			
 		}
 	});
 	$(document).on('click', '.dathang', (ev) => {

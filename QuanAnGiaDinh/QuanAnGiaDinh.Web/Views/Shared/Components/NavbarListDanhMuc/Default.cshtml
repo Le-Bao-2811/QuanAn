@@ -1,0 +1,6 @@
+﻿@model ICollection<QuanAnGiaDinh.DTOs.TheLoaiMenu>
+<a asp-action="Index" asp-controller="Home" asp-area="" class="nav-item nav-link menuclient">Trang chủ</a>
+@foreach (var i in Model)
+{
+	<a style="cursor:pointer" data-id="@i.Id" class="nav-item nav-link menuclient">@i.TheLoai</a>
+}

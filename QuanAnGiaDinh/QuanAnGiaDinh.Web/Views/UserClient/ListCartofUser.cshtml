@@ -148,7 +148,7 @@
 														<label for="email" class="field__label">
 															Tổng số tiền
 														</label>
-														<b>@item.Sotien</b>
+														<b>@item.Sotien.ToString("#,0##") VNĐ</b>
 													</div>
 												</div>
 											</div>
@@ -217,7 +217,7 @@
 															</span>
 														</th>
 														<td class="product__quantity visually-hidden"><em>Số lượng:</em>@cart.SoLuong</td>
-														<td class="product__price">@cart.ThanhTien</td>
+														<td class="product__price">@cart.ThanhTien.ToString("#,0##") VNĐ</td>
 													</tr>
 												}
 
@@ -246,3 +246,5 @@
 		</div>
 	}
 </body>
+<script src="~/jquery/jquery.js"></script>
+<script src="~/Client/Giaodien.js"></script>

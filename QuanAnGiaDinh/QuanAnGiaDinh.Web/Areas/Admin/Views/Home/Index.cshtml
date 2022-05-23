@@ -127,48 +127,66 @@
     });
 
     // Set data
-    var data = [
-      {
-        date: new Date(2021, 5, 12).getTime(),
-        value: 90,
-      },
-      {
-        date: new Date(2021, 5, 13).getTime(),
-        value: 53,
-      },
-      {
-        date: new Date(2021, 5, 14).getTime(),
-        value: 56,
-      },
-      {
-        date: new Date(2021, 5, 15).getTime(),
-        value: 52,
-      },
-      {
-        date: new Date(2021, 5, 16).getTime(),
-        value: 500,
-      },
-      {
-        date: new Date(2021, 5, 17).getTime(),
-        value: 47,
-      },
-      {
-        date: new Date(2021, 5, 18).getTime(),
-        value: 15,
-        bullet: true,
-      },
-    ];
+    //var data = [
+    //  {
+    //    date: new Date(2021, 5, 12).getTime(),
+    //    value: 90,
+    //  },
+    //  {
+    //    date: new Date(2021, 5, 13).getTime(),
+    //    value: 53,
+    //  },
+    //  {
+    //    date: new Date(2021, 5, 14).getTime(),
+    //    value: 56,
+    //  },
+    //  {
+    //    date: new Date(2021, 5, 15).getTime(),
+    //    value: 52,
+    //  },
+    //  {
+    //    date: new Date(2021, 5, 16).getTime(),
+    //    value: 500,
+    //  },
+    //  {
+    //    date: new Date(2021, 5, 17).getTime(),
+    //    value: 47,
+    //  },
+    //  {
+    //    date: new Date(2021, 5, 18).getTime(),
+    //    value: 15,
+    //    bullet: true,
+    //  },
+    //  ];
+      var data=[]
+      //data.map(item => console.log(typeof (item.date)))
+      $.get("/admin/home/thongke", (dulieu) => {
+          dulieu.map(item => {
+              data.push({
+                  date: new Date(item.date).getTime(),
+                  value: item.value,
+				  bullet: true,
+			  })
+              
+          })
+          series.data.setAll(data);
 
-    series.data.setAll(data);
+		  // Make stuff animate on load
+		  // https://www.amcharts.com/docs/v5/concepts/animations/
+		  series.appear(1000);
+		  chart.appear(1000, 100);
+	  })
+    //series.data.setAll(data);
 
-    // Make stuff animate on load
-    // https://www.amcharts.com/docs/v5/concepts/animations/
-    series.appear(1000);
-    chart.appear(1000, 100);
+    //// Make stuff animate on load
+    //// https://www.amcharts.com/docs/v5/concepts/animations/
+    //series.appear(1000);
+    //chart.appear(1000, 100);
   }); // end am5.ready()
 </script>
 
 <!-- HTML -->
+<h1 class="text-center">Thống kê doanh số bán hàng</h1>
 <div id="chartdiv"></div>
 
 

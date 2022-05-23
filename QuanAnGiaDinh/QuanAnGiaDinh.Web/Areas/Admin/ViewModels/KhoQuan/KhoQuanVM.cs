@@ -18,7 +18,7 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.ViewModels.KhoQuan
 		[DisplayName("Số lượng")]
 		public int Soluong { get; set; }
 		[DisplayName("Mã hàng")]
-		public int? MahangId { get; set; }
+		public int MahangId { get; set; }
 		[DisplayName("Ngày nhập")]
 		public DateTime? ngaynhap { get; set; }
 		public int? DisplayOrder { get; set; }

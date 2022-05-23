@@ -10,8 +10,8 @@ using QuanAnGiaDinh.Data;
 namespace QuanAnGiaDinh.Data.Migrations
 {
     [DbContext(typeof(QuanAnGiaDinhDbContext))]
-    [Migration("20220112073022_taobang")]
-    partial class taobang
+    [Migration("20220520060727_suaid")]
+    partial class suaid
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,27 @@ namespace QuanAnGiaDinh.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.ChiTietDonDatHang", b =>
+                {
+                    b.Property<int>("IdDatHang")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdMenu")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ThanhTien")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdDatHang", "IdMenu");
+
+                    b.HasIndex("IdMenu");
+
+                    b.ToTable("ChiTietDonHang");
+                });
 
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.ChucVu", b =>
                 {
@@ -70,6 +91,9 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<DateTime>("Gio")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("IdTaiKhoan")
+                        .HasColumnType("int");
+
                     b.Property<string>("KhuVuc")
                         .HasColumnType("nvarchar(max)");
 
@@ -83,6 +107,8 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdTaiKhoan");
 
                     b.ToTable("DatBan");
                 });
@@ -100,8 +126,8 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<int?>("DisplayOrder")
                         .HasColumnType("int");
 
-                    b.Property<string>("MonAn")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("IdTaiKhoan")
+                        .HasColumnType("int");
 
                     b.Property<string>("SDT")
                         .HasColumnType("nvarchar(max)");
@@ -116,6 +142,8 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdTaiKhoan");
 
                     b.ToTable("DatHang");
                 });
@@ -160,6 +188,12 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<string>("Thucpham")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TongSoLuong")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("idTaiKhoan")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("ngaynhap")
                         .HasColumnType("datetime2");
 
@@ -168,6 +202,8 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.HasIndex("IdTrangThai");
 
                     b.HasIndex("MahangId");
+
+                    b.HasIndex("idTaiKhoan");
 
                     b.ToTable("KhoQuan");
                 });
@@ -187,6 +223,9 @@ namespace QuanAnGiaDinh.Data.Migrations
 
                     b.Property<string>("LoaiHang")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TongSoLuong")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -212,17 +251,28 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<int?>("IdTheLoai")
                         .HasColumnType("int");
 
+                    b.Property<string>("Mota")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SLDaBan")
+                        .HasColumnType("int");
+
                     b.Property<string>("ThucDon")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("duongdan")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("idTaiKhoan")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IdDanhMuc");
 
                     b.HasIndex("IdTheLoai");
+
+                    b.HasIndex("idTaiKhoan");
 
                     b.ToTable("Menu");
                 });
@@ -233,6 +283,9 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Diachi")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("DisplayOrder")
                         .HasColumnType("int");
@@ -252,11 +305,22 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<DateTime?>("NgayVaoLam")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("SDT")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("duongdanimg")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("idTaiKhoan")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IdChucVuNV");
 
                     b.HasIndex("IdKVucLamViec");
+
+                    b.HasIndex("idTaiKhoan");
 
                     b.ToTable("NhanVien");
                 });
@@ -275,6 +339,12 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
+
+                    b.Property<int?>("IdRole")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -332,6 +402,43 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.ToTable("TrangThaiKho");
                 });
 
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.ChiTietDonDatHang", b =>
+                {
+                    b.HasOne("QuanAnGiaDinh.DTOs.DatHang", "datHang")
+                        .WithMany("chiTietDonDatHangs")
+                        .HasForeignKey("IdDatHang")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QuanAnGiaDinh.DTOs.Menu", "menu")
+                        .WithMany("chiTietDonDatHangs")
+                        .HasForeignKey("IdMenu")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("datHang");
+
+                    b.Navigation("menu");
+                });
+
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.DatBan", b =>
+                {
+                    b.HasOne("QuanAnGiaDinh.DTOs.TaiKhoan", "taiKhoan")
+                        .WithMany("datBans")
+                        .HasForeignKey("IdTaiKhoan");
+
+                    b.Navigation("taiKhoan");
+                });
+
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.DatHang", b =>
+                {
+                    b.HasOne("QuanAnGiaDinh.DTOs.TaiKhoan", "taiKhoan")
+                        .WithMany("datHangs")
+                        .HasForeignKey("IdTaiKhoan");
+
+                    b.Navigation("taiKhoan");
+                });
+
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.KhoQuan", b =>
                 {
                     b.HasOne("QuanAnGiaDinh.DTOs.TrangThaiKho", "trangThaiKho")
@@ -342,7 +449,13 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .WithMany("khoQuans")
                         .HasForeignKey("MahangId");
 
+                    b.HasOne("QuanAnGiaDinh.DTOs.TaiKhoan", "taiKhoan")
+                        .WithMany("khoQuans")
+                        .HasForeignKey("idTaiKhoan");
+
                     b.Navigation("maHang");
+
+                    b.Navigation("taiKhoan");
 
                     b.Navigation("trangThaiKho");
                 });
@@ -357,7 +470,13 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .WithMany("menus")
                         .HasForeignKey("IdTheLoai");
 
+                    b.HasOne("QuanAnGiaDinh.DTOs.TaiKhoan", "taiKhoan")
+                        .WithMany("menus")
+                        .HasForeignKey("idTaiKhoan");
+
                     b.Navigation("DanhMucMenu");
+
+                    b.Navigation("taiKhoan");
 
                     b.Navigation("TheLoaiMenu");
                 });
@@ -372,9 +491,15 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .WithMany("nhanViens")
                         .HasForeignKey("IdKVucLamViec");
 
+                    b.HasOne("QuanAnGiaDinh.DTOs.TaiKhoan", "taiKhoan")
+                        .WithMany("nhanViens")
+                        .HasForeignKey("idTaiKhoan");
+
                     b.Navigation("ChucVu");
 
                     b.Navigation("KVLamViec");
+
+                    b.Navigation("taiKhoan");
                 });
 
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.ChucVu", b =>
@@ -387,6 +512,11 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Navigation("menus");
                 });
 
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.DatHang", b =>
+                {
+                    b.Navigation("chiTietDonDatHangs");
+                });
+
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.KVLamViec", b =>
                 {
                     b.Navigation("nhanViens");
@@ -395,6 +525,24 @@ namespace QuanAnGiaDinh.Data.Migrations
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.MaHang", b =>
                 {
                     b.Navigation("khoQuans");
+                });
+
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.Menu", b =>
+                {
+                    b.Navigation("chiTietDonDatHangs");
+                });
+
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.TaiKhoan", b =>
+                {
+                    b.Navigation("datBans");
+
+                    b.Navigation("datHangs");
+
+                    b.Navigation("khoQuans");
+
+                    b.Navigation("menus");
+
+                    b.Navigation("nhanViens");
                 });
 
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.TheLoaiMenu", b =>

@@ -21,7 +21,8 @@ namespace QuanAnGiaDinh.DTOs
 		public int Id { get; set; }
 		[DisplayName("Thực đơn")]
 		public string ThucDon { get; set; }
-		[DisplayName("Danh Mục")]
+        public string Mota { get; set; }
+        [DisplayName("Danh Mục")]
 		public int? IdDanhMuc { get; set; }
 		[DisplayName("Thể Loại")]
 		public int? IdTheLoai { get; set; }

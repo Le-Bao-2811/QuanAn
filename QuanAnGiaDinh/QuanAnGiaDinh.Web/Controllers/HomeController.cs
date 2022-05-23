@@ -32,30 +32,15 @@ namespace QuanAnGiaDinh.Web.Controllers
 		{
             return View();
 		}
-		public IActionResult Menu(int page=1)
+		public IActionResult Menu(int id,int page=1)
 		{
             var data = db.Menu
-                 .Where(x=>x.ThucDon!=null&&x.IdTheLoai==2)
+                 .Where(x=>x.ThucDon!=null&&x.IdTheLoai==id)
                  .OrderByDescending(u => u.Id)
-                 .ToPagedList(page, 3);
+                 .ToPagedList(page, 8);
             return View(data);
         }
-		public IActionResult MenuFastfood(int page =1)
-		{
-            var data = db.Menu
-                .Where(x => x.ThucDon != null && x.IdTheLoai == 1)
-                .OrderByDescending(u => u.Id)
-                .ToPagedList(page, 3);
-            return View(data);
-        }
-		public IActionResult MenuDrink(int page =1)
-		{
-            var data = db.Menu
-                .Where(x => x.ThucDon != null && x.IdTheLoai == 3)
-                .OrderByDescending(u => u.Id)
-                .ToPagedList(page, 3);
-            return View(data);
-        }
+		
 
 		[HttpPost]
 		public async Task<IActionResult> Add(DatBanVM datBanVM)
@@ -112,7 +97,7 @@ namespace QuanAnGiaDinh.Web.Controllers
             await dbService.AddAsync<DatHang>(donDatHang);
             return Ok(true);
             }
-            catch (Exception ex)
+            catch 
             {
                 return Ok(false);
             }

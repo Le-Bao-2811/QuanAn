@@ -13,6 +13,7 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.ViewModels.MaHang
 		public int Id { get; set; }
 		[DisplayName("Loại Hàng")]
 		public string LoaiHang { get; set; }
-		public int? DisplayOrder { get; set; }
+        public int TongSoLuong { get; set; }
+        public int? DisplayOrder { get; set; }
 	}
 }

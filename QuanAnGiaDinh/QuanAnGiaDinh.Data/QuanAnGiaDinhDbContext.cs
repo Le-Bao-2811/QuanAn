@@ -23,7 +23,7 @@ namespace QuanAnGiaDinh.Data
 		public DbSet<ChiTietDonDatHang> chiTietDonDatHangs { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-UHPOGM33\MSSQLSERVER01;Initial Catalog=QuanAn;Integrated Security=True");
+			optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-UHPOGM33\MSSQLSERVER01;Initial Catalog=QuanAN;Integrated Security=True");
 		}
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

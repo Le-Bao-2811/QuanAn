@@ -7,7 +7,7 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.ViewModels.Home
 {
     public class ThongKeVM
     {
-        public string date { get; set; }
+        public DateTime date { get; set; }
         public int value { get; set; }
     }
 }

@@ -10,8 +10,8 @@ using QuanAnGiaDinh.Data;
 namespace QuanAnGiaDinh.Data.Migrations
 {
     [DbContext(typeof(QuanAnGiaDinhDbContext))]
-    [Migration("20220321090519_soluongdaban")]
-    partial class soluongdaban
+    [Migration("20220520061710_suaid1")]
+    partial class suaid1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -91,6 +91,9 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<DateTime>("Gio")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("IdTaiKhoan")
+                        .HasColumnType("int");
+
                     b.Property<string>("KhuVuc")
                         .HasColumnType("nvarchar(max)");
 
@@ -104,6 +107,8 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdTaiKhoan");
 
                     b.ToTable("DatBan");
                 });
@@ -183,9 +188,6 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<string>("Thucpham")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TongSoLuong")
-                        .HasColumnType("int");
-
                     b.Property<int?>("idTaiKhoan")
                         .HasColumnType("int");
 
@@ -219,6 +221,9 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Property<string>("LoaiHang")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TongSoLuong")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("MaHang");
@@ -242,6 +247,9 @@ namespace QuanAnGiaDinh.Data.Migrations
 
                     b.Property<int?>("IdTheLoai")
                         .HasColumnType("int");
+
+                    b.Property<string>("Mota")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SLDaBan")
                         .HasColumnType("int");
@@ -329,6 +337,9 @@ namespace QuanAnGiaDinh.Data.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<int?>("IdRole")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
 
@@ -405,6 +416,15 @@ namespace QuanAnGiaDinh.Data.Migrations
                     b.Navigation("datHang");
 
                     b.Navigation("menu");
+                });
+
+            modelBuilder.Entity("QuanAnGiaDinh.DTOs.DatBan", b =>
+                {
+                    b.HasOne("QuanAnGiaDinh.DTOs.TaiKhoan", "taiKhoan")
+                        .WithMany("datBans")
+                        .HasForeignKey("IdTaiKhoan");
+
+                    b.Navigation("taiKhoan");
                 });
 
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.DatHang", b =>
@@ -511,6 +531,8 @@ namespace QuanAnGiaDinh.Data.Migrations
 
             modelBuilder.Entity("QuanAnGiaDinh.DTOs.TaiKhoan", b =>
                 {
+                    b.Navigation("datBans");
+
                     b.Navigation("datHangs");
 
                     b.Navigation("khoQuans");

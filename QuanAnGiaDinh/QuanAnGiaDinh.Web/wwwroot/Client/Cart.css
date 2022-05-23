@@ -32,7 +32,7 @@
 .card {
 	position: fixed;
 	height: 100%;
-	width: 400px;
+	width: 464px;
 	right: 0;
 	top: 0;
 	background-color: #ddd;
@@ -63,6 +63,6 @@
 
 .card i {
 	float: left;
-	padding-left: 343px;
+	padding-left: 360px;
 	cursor: pointer;
 }

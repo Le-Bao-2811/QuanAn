@@ -18,6 +18,7 @@ namespace QuanAnGiaDinh.DTOs
 		public int Id { get; set; }
 		[DisplayName("Loại Hàng")]
 		public string LoaiHang { get; set; }
+		public int TongSoLuong { get; set; }
 		public int? DisplayOrder { get; set; }
 		public DateTime DeleteDate { get; set; }
 		public ICollection<KhoQuan> khoQuans { get; set; }

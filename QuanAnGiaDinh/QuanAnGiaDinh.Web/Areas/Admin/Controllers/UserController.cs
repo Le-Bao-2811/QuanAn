@@ -45,11 +45,11 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 					user.FullName = addUserVM.FullName;
 					user.CreateDate = DateTime.Now;
 					user.IsAdmin = addUserVM.Isadmin;
-
+					user.IdRole = addUserVM.RoleID;
 					await db.taiKhoans.AddAsync(user);
 					await db.SaveChangesAsync();
 				}
-				catch
+				catch(Exception ex)
 				{
 					TempData["Eror"] = "Đã xảy ra lỗi";
 				}
@@ -93,15 +93,19 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 						IsPersistent = model.Check
 					};
 					await HttpContext.SignInAsync("Cookies", principal, authProperty); // startup đăng kí chữ j thì bên đăy đăng nhập chữ đó
+					if (user.IsAdmin)
+					{
+						return RedirectToAction("Index", "Home");
+					}
+					else
+					{
+						return RedirectToAction("Index", "Home", new { area = "" });
+					}
 				}
-                if (user.IsAdmin)
-                {
-					return RedirectToAction("Index", "Menu");
-                }
                 else
                 {
-					return RedirectToAction("Index","Home",new { area=""});
-                }
+					return RedirectToAction(nameof(Login));
+				}
 			}
 			else
 			{

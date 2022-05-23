@@ -5,11 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>ListDatBan</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h1>Danh sách đặt bàn</h1>
 <table class="table">
     <thead>
         <tr>
@@ -31,37 +27,42 @@
             <th>
                 @Html.DisplayNameFor(model => model.Gio)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DisplayOrder)
-            </th>
+           
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenKH)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.STD)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhuVuc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ngay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DisplayOrder)
-            </td>
-        </tr>
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Id)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.TenKH)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.STD)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.KhuVuc)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Ngay)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Gio)
+			</td>
+			<td>
+				@if (item.Duyet == true)
+				{
+					<button class="btn btn-outline-success duyetdathang" disabled>Đã xác nhận</button>
+				}
+				else
+				{
+					<a class="btn btn-outline-success " asp-action="DuyetDB" asp-controller="HoatDong" asp-area="Admin" asp-route-id="@item.Id">Chưa xác nhận</a>
+				}
+			</td>
+		</tr>
 }
     </tbody>
 </table>

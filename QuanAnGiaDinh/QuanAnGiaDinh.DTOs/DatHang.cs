@@ -23,7 +23,8 @@ namespace QuanAnGiaDinh.DTOs
 		public DateTime ThoiGianDatHang { get; set; }
 		public int? DisplayOrder { get; set; }
 		public int? IdTaiKhoan { get; set; }
-		[ForeignKey(nameof(IdTaiKhoan))]
+        public bool Duyet { get; set; }
+        [ForeignKey(nameof(IdTaiKhoan))]
 		public TaiKhoan taiKhoan { get; set; }
 		public ICollection<ChiTietDonDatHang> chiTietDonDatHangs { get; set; }
 	}

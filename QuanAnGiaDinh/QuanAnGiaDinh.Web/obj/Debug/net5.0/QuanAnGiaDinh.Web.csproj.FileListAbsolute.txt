@@ -403,3 +403,6 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Vi
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Views\UserClient\ListCartofUser.cshtml.g.cs
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\HoatDong\ListCart.cshtml.g.cs
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\HoatDong\ListDatBan.cshtml.g.cs
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\DiffMatchPatch.dll
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Views\Shared\Components\NavbarListDanhMuc\Default.cshtml.g.cs
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\HoatDong\XemDatHang.cshtml.g.cs

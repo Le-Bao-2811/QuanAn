@@ -22,5 +22,6 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.ViewModels.TaiKhoan
 		[Required(ErrorMessage = "Dữ liệu này là bắt buộc")]
 		public string FullName { get; set; }
         public bool Isadmin { get; set; }
+        public int RoleID { get; set; }
     }
 }

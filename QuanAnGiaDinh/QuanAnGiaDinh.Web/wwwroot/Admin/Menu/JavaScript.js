@@ -22,7 +22,6 @@ $(document).ready(function () {
 		modal.appendBody($("#_AddorUpdate").html());
 		modal.setDefaultFooterButton("Lưu", "Hủy");
 		var form = modal.modalBody.find("form");
-		console.log(form.find("#Id"))
 		//update
 		if ($(ev.currentTarget.parentElement.parentElement).attr('update') == '') {
 			id = $(ev.currentTarget).closest("td").attr("data-id");
@@ -76,4 +75,9 @@ $(document).ready(function () {
 			});
 		});
 	});
+	$(document).on("change", "#textmenu", (ev) => {
+		console.log(ev);
+    })
 });
+
+

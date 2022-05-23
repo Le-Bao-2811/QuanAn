@@ -23,7 +23,6 @@ namespace QuanAnGiaDinh.DTOs
         public int? idTaiKhoan { get; set; }
         [DisplayName("Ngày nhập")]
 		public DateTime? ngaynhap { get; set; }
-        public int TongSoLuong { get; set; }
         public int? DisplayOrder { get; set; }
 
 		[ForeignKey(nameof(MahangId))]
