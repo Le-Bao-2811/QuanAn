@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuanAnGiaDinh.Web.Areas.Admin.ViewModels.NhanVien
 {
-	public class NhanVienVM
-	{
+    public class AddEditNhanVienVM
+    {
 		public int Id { get; set; }
 		[DisplayName("Họ Và Tên")]
 		public string HoTen { get; set; }
@@ -21,17 +21,5 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.ViewModels.NhanVien
 		public DateTime? NgayVaoLam { get; set; }
 		public int? DisplayOrder { get; set; }
 		public int Luong { get; set; }
-		public ChucVu chucVu { get; set; }
-		public KVLamViec kVLamViec { get; set; }
-
-		public class ChucVu
-		{
-			public string ChucVuNV { get; set; }
-		}
-		public class KVLamViec
-		{
-			public string KVucLamViec { get; set; }
-		}
-
 	}
 }

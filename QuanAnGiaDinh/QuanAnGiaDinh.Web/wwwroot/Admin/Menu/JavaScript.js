@@ -29,6 +29,7 @@ $(document).ready(function () {
 				function (data, textStatus, jsXHR) {
 					form.find("#Id").val(data.id);
 					form.find("#ThucDon").val(data.thucDon);
+					form.find("#Hinh").val(data.duongdan);
 					form.find("#IdDanhMuc").val(data.idDanhMuc);
 					form.find("#IdTheLoai").val(data.idTheLoai);
 					form.find("#GiaTien").val(data.giaTien);

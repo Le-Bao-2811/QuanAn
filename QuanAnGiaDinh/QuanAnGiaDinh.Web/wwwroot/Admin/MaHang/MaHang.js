@@ -7,6 +7,7 @@ $(document).ready(function () {
 		columns: [
 			{ data: "id" },
 			{ data: "loaiHang" },
+			{ data:"tongSoLuong" },
 			{ data: null, defaultContent: $(".js-placeholder").html() }
 		],
 	});

@@ -26,8 +26,11 @@
 			// lấy dữ liêu cũ để update
 			$.get("/admin/nhanvien/get", { id: id },
 				function (data, textStatus, jqXHR) {
+					console.log(data);
 					form.find("#Id").val(data.id);
-					form.find("#Hoten").val(data.hoTen);
+					form.find("#HoTen").val(data.hoTen);
+					form.find("#SDT").val(data.sdt);
+					form.find("#Diachi").val(data.diachi);
 					form.find("#ChucVuNhanVien").val(data.chucVuNV);
 					form.find("#KVucLamViec").val(data.kVucLamViec);
 					form.find("#Luong").val(data.luong);

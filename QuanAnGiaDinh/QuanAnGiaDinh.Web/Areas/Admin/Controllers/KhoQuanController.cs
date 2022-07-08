@@ -45,21 +45,21 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 			return Ok(dbService.Get<KhoQuan, KhoQuanVM>(id));
 		}
 		[HttpPost]
-		public async Task<IActionResult> AddorUpdate(KhoQuanVM khoQuanVM)
+		public async Task<IActionResult> AddorUpdate(AddEiditKhoQuanVM khoQuanVM)
 		{
             try
             {
 			if(khoQuanVM.Id==0)
 			{
-				QuanAnGiaDinhDbContext db = new QuanAnGiaDinhDbContext();
+					QuanAnGiaDinhDbContext db = new QuanAnGiaDinhDbContext();
                     var data = db.MaHang.Find(khoQuanVM.MahangId);
 					data.TongSoLuong = data.TongSoLuong + khoQuanVM.Soluong;
 					db.Update(data);
 					db.SaveChanges();
                     khoQuanVM.ngaynhap = DateTime.Now;
-				return Ok(await dbService.AddAsync<KhoQuan, KhoQuanVM>(khoQuanVM));
+				return Ok(await dbService.AddAsync<KhoQuan, AddEiditKhoQuanVM>(khoQuanVM));
 			}
-			return Ok(await dbService.UpdateAsync<KhoQuan, KhoQuanVM>(khoQuanVM));
+			return Ok(await dbService.UpdateAsync<KhoQuan, AddEiditKhoQuanVM>(khoQuanVM));
             }
             catch (Exception ex) {
 				return Ok(false);
@@ -68,6 +68,12 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 		[HttpDelete]
 		public async Task<IActionResult>Delete(int id)
 		{
+			QuanAnGiaDinhDbContext db = new QuanAnGiaDinhDbContext();
+			var data = db.KhoQuan.Find(id);
+			var dm = db.MaHang.Find(data.MahangId);
+			dm.TongSoLuong = dm.TongSoLuong + data.Soluong;
+			db.Update(data);
+			db.SaveChanges();
 			return Ok(await dbService.DeleteAsync<KhoQuan>(id));
 		}
 	}

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using QuanAnGiaDinh.Data.Services.Admin;
 using QuanAnGiaDinh.DTOs;
 using QuanAnGiaDinh.Shared;
+using QuanAnGiaDinh.Web.Areas.Admin.ViewModels.Menu;
 using QuanAnGiaDinh.Web.Areas.Admin.ViewModels.NhanVien;
 using System;
 using System.Collections.Generic;
@@ -39,14 +40,18 @@ namespace QuanAnGiaDinh.Web.Areas.Admin.Controllers
 			return ForDatatable(input.draw, lisdata);
 		}
 		[HttpPost]
-		public async Task<IActionResult> _AddorUpdate(NhanVienVM nhanVienVM)
+		public async Task<IActionResult> _AddorUpdate(AddEditNhanVienVM nhanVienVM)
 		{
 			if(nhanVienVM.Id==0)
 			{
 				nhanVienVM.NgayVaoLam = DateTime.Now;
-				return Ok(await dbService.AddAsync<NhanVien, NhanVienVM>(nhanVienVM));
+				return Ok(await dbService.AddAsync<NhanVien, AddEditNhanVienVM>(nhanVienVM));
 			}
-			return Ok(await dbService.UpdateAsync<NhanVien, NhanVienVM>(nhanVienVM));
+			return Ok(await dbService.UpdateAsync<NhanVien, AddEditNhanVienVM>(nhanVienVM));
+		}
+		public IActionResult Get(int id)
+		{
+			return Ok(dbService.Get<NhanVien, NhanVienVM>(id));
 		}
 
 	}

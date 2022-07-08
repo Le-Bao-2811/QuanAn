@@ -29,7 +29,7 @@ $(document).ready(function () {
 			$.get("/admin/khoQuan/get", { id: id },
 				function (data, textStatus, jqXHR) {
 					form.find("#Id").val(data.id);
-					form.find("#ThucPham").val(data.thucPham);
+					form.find("#Thucpham").val(data.thucpham);
 					form.find("#IdTrangThai").val(data.idTrangThai);
 					form.find("#Soluong").val(data.soluong);
 					form.find("#MahangId").val(data.mahangId);
