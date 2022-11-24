@@ -33,6 +33,8 @@ namespace QuanAnGiaDinh.Data
 					x.IdDatHang,
 					x.IdMenu
 				});
+
+
 		}
 	}
 }

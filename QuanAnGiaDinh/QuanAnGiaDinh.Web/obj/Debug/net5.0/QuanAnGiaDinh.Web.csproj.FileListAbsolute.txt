@@ -204,7 +204,6 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\QuanAnGi
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\QuanAnGiaDinh.Web.runtimeconfig.json
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\QuanAnGiaDinh.Web.runtimeconfig.dev.json
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\QuanAnGiaDinh.Web.dll
-D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\ref\QuanAnGiaDinh.Web.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\QuanAnGiaDinh.Web.pdb
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\QuanAnGiaDinh.Web.Views.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\QuanAnGiaDinh.Web.Views.pdb
@@ -406,3 +405,9 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Ar
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\bin\Debug\net5.0\DiffMatchPatch.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Views\Shared\Components\NavbarListDanhMuc\Default.cshtml.g.cs
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\HoatDong\XemDatHang.cshtml.g.cs
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\staticwebassets\QuanAnGiaDinh.Web.StaticWebAssets.Pack.cache
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\staticwebassets\msbuild.QuanAnGiaDinh.Web.Microsoft.AspNetCore.StaticWebAssets.props
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\staticwebassets\msbuild.build.QuanAnGiaDinh.Web.props
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.QuanAnGiaDinh.Web.props
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.QuanAnGiaDinh.Web.props
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\obj\Debug\net5.0\refint\QuanAnGiaDinh.Web.dll

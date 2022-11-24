@@ -35,7 +35,9 @@ using QuanAnGiaDinh.Web.Areas.Admin.ViewModels;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6949259b42920b297107b2911d297d1d15b5293", @"/Areas/Admin/Views/Shared/_NavigationBar.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9d0cb0d2f476d74bf00ba415c4a67b9b25d31bde", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    #nullable restore
     public class Areas_Admin_Views_Shared__NavigationBar : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
+    #nullable disable
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -90,7 +92,7 @@ using QuanAnGiaDinh.Web.Areas.Admin.ViewModels;
 #nullable disable
             WriteLiteral("\r\n\r\n<nav class=\"border-right width-325px\">\r\n\t<div class=\"p-5\">\r\n");
             WriteLiteral("\t</div>\r\n\t<ul class=\"list-group list-group-flush mt-2\">\r\n\t\t<li class=\"list-group-item\">\r\n\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b52936392", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b52936438", async() => {
                 WriteLiteral("<i class=\"fas fa-home\"></i>Trang chủ");
             }
             );
@@ -148,7 +150,7 @@ WriteAttributeValue(" ", 1236, active, 1237, 7, false);
 #line hidden
 #nullable disable
             WriteLiteral("\t\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b52939300", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b52939346", async() => {
                 WriteLiteral("\r\n\t\t\t\t\t\t<i");
                 BeginWriteAttribute("class", " class=\"", 1476, "\"", 1504, 3);
                 WriteAttributeValue("", 1484, "fas", 1484, 3, true);
@@ -244,7 +246,7 @@ WriteAttributeValue("", 1601, item.IdAttr, 1601, 12, false);
 #line hidden
 #nullable disable
             WriteLiteral("\t\t\t\t\t\t\t<li class=\"pt-2\">\r\n\t\t\t\t\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b529314537", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b529314583", async() => {
 #nullable restore
 #line 51 "D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Web\Areas\Admin\Views\Shared\_NavigationBar.cshtml"
                                                                                                                                         Write(child.Text);
@@ -316,7 +318,7 @@ AddHtmlAttributeValue("", 1713, className, 1713, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("\t\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b529318474", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6949259b42920b297107b2911d297d1d15b529318520", async() => {
                 WriteLiteral("\r\n\t\t\t\t\t\t<i");
                 BeginWriteAttribute("class", " class=\"", 2030, "\"", 2058, 3);
                 WriteAttributeValue("", 2038, "fas", 2038, 3, true);
@@ -410,16 +412,26 @@ AddHtmlAttributeValue("", 1921, item.IdAttr, 1921, 12, false);
             WriteLiteral("\t</ul>\r\n\r\n</nav>");
         }
         #pragma warning restore 1998
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<dynamic> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<dynamic> Html { get; private set; } = default!;
+        #nullable disable
     }
 }
 #pragma warning restore 1591

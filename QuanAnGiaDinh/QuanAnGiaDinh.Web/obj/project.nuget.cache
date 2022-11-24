@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1Db1VP24ETNcbQfFSVYcStfHbuudyZQkKxl62FdzgPu/+3u+N90orIUlkD5KBQZjCRZhFZsWBv27dAGtxuhQNg==",
+  "dgSpecHash": "GjMpwI+umTJas3pBta24Fkw60doMY5EP7B4v8ddlALhHLrj336o0jldNFr1BTvrDlG9PB4khf78z04b62wLdwQ==",
   "success": true,
   "projectFilePath": "D:\\hoaibao\\DuAN\\QuanAn\\QuanAnGiaDinh\\QuanAnGiaDinh.Web\\QuanAnGiaDinh.Web.csproj",
   "expectedPackageFiles": [
@@ -137,8 +137,7 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\x.pagedlist\\8.1.0\\x.pagedlist.8.1.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\x.pagedlist.mvc.core\\8.1.0\\x.pagedlist.mvc.core.8.1.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+    "C:\\Users\\ASUS\\.nuget\\packages\\x.pagedlist.mvc.core\\8.1.0\\x.pagedlist.mvc.core.8.1.0.nupkg.sha512"
   ],
   "logs": []
 }

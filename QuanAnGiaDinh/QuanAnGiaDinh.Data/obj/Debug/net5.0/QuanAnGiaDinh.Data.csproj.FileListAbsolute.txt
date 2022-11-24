@@ -22,7 +22,6 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\QuanAnG
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\QuanAnGiaDinh.Data.runtimeconfig.json
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\QuanAnGiaDinh.Data.runtimeconfig.dev.json
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\QuanAnGiaDinh.Data.dll
-D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\ref\QuanAnGiaDinh.Data.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\QuanAnGiaDinh.Data.pdb
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\QuanAnGiaDinh.DTOs.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\bin\Debug\net5.0\QuanAnGiaDinh.Shared.dll
@@ -38,3 +37,4 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\obj\Debug\net5.0\QuanAnG
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\obj\Debug\net5.0\ref\QuanAnGiaDinh.Data.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\obj\Debug\net5.0\QuanAnGiaDinh.Data.pdb
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\obj\Debug\net5.0\QuanAnGiaDinh.Data.genruntimeconfig.cache
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Data\obj\Debug\net5.0\refint\QuanAnGiaDinh.Data.dll

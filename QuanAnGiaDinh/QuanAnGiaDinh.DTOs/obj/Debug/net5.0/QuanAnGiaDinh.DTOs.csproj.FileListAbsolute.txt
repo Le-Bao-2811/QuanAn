@@ -17,7 +17,6 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\bin\Debug\net5.0\QuanAnG
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\bin\Debug\net5.0\QuanAnGiaDinh.DTOs.runtimeconfig.json
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\bin\Debug\net5.0\QuanAnGiaDinh.DTOs.runtimeconfig.dev.json
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\bin\Debug\net5.0\QuanAnGiaDinh.DTOs.dll
-D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\bin\Debug\net5.0\ref\QuanAnGiaDinh.DTOs.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\bin\Debug\net5.0\QuanAnGiaDinh.DTOs.pdb
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\obj\Debug\net5.0\QuanAnGiaDinh.DTOs.csproj.AssemblyReference.cache
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\obj\Debug\net5.0\QuanAnGiaDinh.DTOs.GeneratedMSBuildEditorConfig.editorconfig
@@ -28,3 +27,4 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\obj\Debug\net5.0\QuanAnG
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\obj\Debug\net5.0\ref\QuanAnGiaDinh.DTOs.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\obj\Debug\net5.0\QuanAnGiaDinh.DTOs.pdb
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\obj\Debug\net5.0\QuanAnGiaDinh.DTOs.genruntimeconfig.cache
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.DTOs\obj\Debug\net5.0\refint\QuanAnGiaDinh.DTOs.dll

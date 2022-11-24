@@ -12,7 +12,6 @@ D:\hoaibao\DuAN\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\QuanAnGiaDin
 D:\hoaibao\DuAN\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\QuanAnGiaDinh.Shared.csproj.AssemblyReference.cache
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\bin\Debug\net5.0\QuanAnGiaDinh.Shared.deps.json
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\bin\Debug\net5.0\QuanAnGiaDinh.Shared.dll
-D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\bin\Debug\net5.0\ref\QuanAnGiaDinh.Shared.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\bin\Debug\net5.0\QuanAnGiaDinh.Shared.pdb
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\QuanAnGiaDinh.Shared.csproj.AssemblyReference.cache
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\QuanAnGiaDinh.Shared.GeneratedMSBuildEditorConfig.editorconfig
@@ -22,3 +21,4 @@ D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\QuanA
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\QuanAnGiaDinh.Shared.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\ref\QuanAnGiaDinh.Shared.dll
 D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\QuanAnGiaDinh.Shared.pdb
+D:\hoaibao\DuAN\QuanAn\QuanAnGiaDinh\QuanAnGiaDinh.Shared\obj\Debug\net5.0\refint\QuanAnGiaDinh.Shared.dll
